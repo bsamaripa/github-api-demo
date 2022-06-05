@@ -9,13 +9,13 @@ Install the dependencies
 * `yarn` or `npm i`
 
 Create the configuration
-`cp env.example .env.local`
+* `cp env.example .env`
 
 Running the tests
-`yarn test` or `npm run test`
+* `yarn test` or `npm run test`
 
 Running for development
-`yarn start-dev` or `npm run start-dev`
+* `yarn start-dev` or `npm run start-dev`
 
 Build and run
-`yarn build && yarn start`
+* `yarn build && yarn start`

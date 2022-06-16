@@ -1,5 +1,6 @@
 import dotenv from 'dotenv'
 import express, { Express, Request, Response, NextFunction } from 'express'
+import { handleFetchPullRequests } from './helpers'
 
 dotenv.config()
 
@@ -7,11 +8,10 @@ const PORT = process.env.PORT || 8080
 const app: Express = express()
 
 app.get('/pull_requests/:owner/:repository', async (req: Request, res: Response, next: NextFunction) => {
-    res.send(req.params)
-})
-
-app.get('/pull_requests/:owner/:repository/:pullRequestId', async (req: Request, res: Response, next: NextFunction) => {
-    res.send(req.params)
+    Promise.resolve().then(async () => {
+        const data = await handleFetchPullRequests(req.params['owner'], req.params['repository'])
+        res.send(data)
+    }).catch(next)
 })
 
 app.options("/pull_requests/*", (req: Request, res: Response, next: NextFunction) => {

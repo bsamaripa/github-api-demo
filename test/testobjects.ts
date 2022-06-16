@@ -604,3 +604,13 @@ export const NotFoundResponse = {
     "message": "Not Found",
     "documentation_url": "https://docs.github.com/rest/reference/pulls"
 }
+
+export const handleFetchPullsResponse = [
+  {
+    "author": "octocat",
+    "commit_count": 1,
+    "id": 1,
+    "number": 1347,
+    "title": "Amazing new feature",
+  }
+]

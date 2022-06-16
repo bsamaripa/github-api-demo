@@ -39,44 +39,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
-  /pull_requests/{owner}/{repository}/{pullRequestId}:
-    get:
-      summary: Info for a specific pull request
-      operationId: getPullRequestById
-      tags:
-        - pull_requests
-      parameters:
-        - name: owner
-          in: path
-          required: true
-          description: The owner of the github repository
-          schema:
-            type: string
-        - name: repository
-          in: path
-          required: true
-          description: The name of the github repository
-          schema:
-            type: string
-        - name: pullRequestId
-          in: path
-          required: true
-          description: The id of the pull request to retrieve
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Expected response to a valid request
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/PullRequests"
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
 components:
   schemas:
     PullRequest:

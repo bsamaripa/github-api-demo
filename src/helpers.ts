@@ -10,7 +10,7 @@ export const handleFetchPullRequests = async (owner: string, repository: string)
         const pulls = await fetchPullRequests(owner, repository)
         const res: APIResponse[] | undefined = await Promise.all(pulls.map(async (pr: GithubPullsResponse) => {
             const commits = await fetchCommitCount(pr.commits_url)
-            return {id: pr.id, number: pr.number, title: pr.title, author: pr.user?.login, commit_count: commits || 0} as APIResponse
+            return { id: pr.id, number: pr.number, title: pr.title, author: pr.user?.login, commit_count: commits || 0 } as APIResponse
         }))
         return res
     }

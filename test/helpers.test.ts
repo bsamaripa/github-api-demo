@@ -1,7 +1,7 @@
-import { fetchCommitCount, fetchPullRequests, handleFetchPullRequests } from '../src/helpers'
-import { CommitsResponse, PullRequestResponse, NotFoundResponse, handleFetchPullsResponse } from './testobjects'
 import axios from 'axios'
 import MockAdapter from 'axios-mock-adapter'
+import { fetchCommitCount, fetchPullRequests, handleFetchPullRequests } from '../src/helpers'
+import { CommitsResponse, handleFetchPullsResponse, NotFoundResponse, PullRequestResponse } from './testobjects'
 
 describe('helpers', () => {
   let mock: MockAdapter

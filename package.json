@@ -2,7 +2,7 @@
   "name": "github-api-demo",
   "version": "1.0.0",
   "description": "Wrapper around github api demo",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "github.com/bsamaripa/github-api-demo",
   "author": "Byron Samaripa <byron.samaripa@gmail.com>",
   "license": "MIT",
